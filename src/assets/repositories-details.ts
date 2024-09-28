@@ -38,16 +38,3 @@ export const repositoriesMappingSchema = {
 } satisfies RepositoriesMappingSchemaType;
 
 export const unwantedRepositories = ["felipecalgaro", "portfolio"];
-
-// export const repositoriesDescriptionMappingSchema = {
-//   polls:
-//     "Cookies-based platform to create and vote on polls at real-time using WebSocket",
-//   notesql: "",
-//   "nextjs-ecommerce":
-//     "E-commerce platform that integrates coupon, payment and mailing systems",
-//   "password-generator": "",
-//   "github-badge": "",
-//   "notifications-service": "",
-//   "ignite-lab-react": "",
-//   "mybrary-fullstack-app": "",
-// };
