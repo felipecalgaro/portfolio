@@ -2,7 +2,7 @@ import {
   newRepositoriesNames,
   repositoriesMappingSchema,
   unwantedRepositories,
-} from "@/assets/repositories-details";
+} from "@/resources/repositories-details";
 import { z } from "zod";
 
 export const repositoriesDataSchema = z.array(
