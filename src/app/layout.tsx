@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Crimson_Text, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const crimson = Crimson_Text({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  fallback: ['Inter'],
+  variable: '--font-crimson',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -16,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${crimson.variable}`}>{children}</body>
     </html>
   );
 }

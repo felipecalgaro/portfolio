@@ -18,6 +18,9 @@ const config: Config = {
         "custom-white": "#F1F1F1",
         "custom-gray": "#B4B4B4",
       },
+      fontFamily: {
+        crimson: ["var(--font-crimson)"],
+      },
     },
   },
   plugins: [],
