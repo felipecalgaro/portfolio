@@ -38,9 +38,10 @@ type MappedRepositoryWithSubrepositories = {
   }[];
 };
 
-type MappedRepositories =
+type MappedRepositories = (
   | MappedRepositoryWithSubrepositories
-  | MappedRepositoryWithoutSubrepositories;
+  | MappedRepositoryWithoutSubrepositories
+)[];
 
 export class MapRepositories {
   private subrepositoriesNames: string[] = [];
@@ -64,7 +65,19 @@ export class MapRepositories {
       }));
   }
 
-  public map(): MappedRepositories[] {
+  private sort(repos: MappedRepositories) {
+    return repos.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+
+  public map(): MappedRepositories {
     const newRepositories = newRepositoriesNames.map((newRepoName) => ({
       name: newRepoName,
       description: repositoriesMappingSchema[newRepoName].description,
@@ -92,6 +105,8 @@ export class MapRepositories {
 
     const filteredRepositories = this.filter();
 
-    return [...filteredRepositories, ...newRepositories];
+    const mappedRepositories = [...filteredRepositories, ...newRepositories];
+
+    return this.sort(mappedRepositories);
   }
 }
