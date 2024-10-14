@@ -21,6 +21,9 @@ const config: Config = {
       fontFamily: {
         crimson: ["var(--font-crimson)"],
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
   plugins: [],
