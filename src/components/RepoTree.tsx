@@ -11,14 +11,13 @@ import { useState } from 'react'
 
 type RepoTreeProps = {
   repo: MappedRepository
-  key: string
 }
 
-export function RepoTree({ repo, key }: RepoTreeProps) {
+export function RepoTree({ repo }: RepoTreeProps) {
   const [isFolderOpen, setIsFolderOpen] = useState(false)
 
   return (
-    <div className='flex flex-col justify-center items-start gap-2' key={key}>
+    <div className='flex flex-col justify-center items-start gap-2'>
       <button onClick={() => setIsFolderOpen((prev) => !prev)} className='flex justify-center items-center gap-3'>
         {isFolderOpen ? (
           <div className='flex justify-center items-center w-9'>
