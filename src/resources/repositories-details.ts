@@ -11,7 +11,7 @@ const newRepositories = {
   polls: {
     name: "polls",
     description:
-      "Cookies-based platform to create and vote on polls at real-time using WebSocket",
+      "Cookies-based platform for creating and voting on polls at real-time using WebSocket",
   },
   notesql: {
     name: "notesql",
