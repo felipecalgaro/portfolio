@@ -5,3 +5,10 @@
 .crimson {
   font-family: var(--font-crimson);
 }
+
+.events-arrow-image {
+  background-image: url("../../public/events-arrow.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position-x: center;
+}
