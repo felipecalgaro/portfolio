@@ -13,7 +13,7 @@ export function useVisibleSection(sections: string[]) {
 
       const viewPortHeight = window.innerHeight;
 
-      return sectionPosition.top <= viewPortHeight;
+      return sectionPosition.top <= viewPortHeight / 2; // section is visible only after showing up at the center of the page or above
     }
 
     return false;
