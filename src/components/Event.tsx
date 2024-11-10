@@ -26,7 +26,7 @@ export function Event({ event, isRightOriented }: EventProps) {
           <Image src={SmallTriangle} alt='' width={8} height={8} className='my-8' />
         </div>
       </div>
-      <EventButton eventIcon={event.icon} isRightOriented={isRightOriented} />
+      <EventButton eventIcon={event.icon} isRightOriented={isRightOriented} images={event.images} content={event.content} title={event.title} />
       <p className={clsx('w-full xs:mt-5 mt-2', {
         'order-first text-end': isRightOriented,
         'text-start': !isRightOriented
