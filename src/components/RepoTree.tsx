@@ -5,7 +5,6 @@ import Image from 'next/image'
 import ClosedFolderIcon from '../assets/closed-folder.svg'
 import OpenFolderIcon from '../assets/open-folder.svg'
 import InfoIcon from '../assets/info-icon.svg'
-import ExpandIcon from '../assets/expand-icon.svg'
 import RepositoryIcon from '../assets/repo-icon.svg'
 import { useState } from 'react'
 
@@ -35,23 +34,19 @@ export function RepoTree({ repo }: RepoTreeProps) {
           <Image src={InfoIcon} alt='info' width={24} height={24} />
           <p className='font-light'>{repo.description}</p>
         </div>
-        <div className='font-light flex justify-center items-center gap-4 cursor-pointer'>
-          <Image src={ExpandIcon} alt='expand' width={24} height={24} />
-          <p className='font-light'>Expand project</p>
-        </div>
         {repo.hasSubrepositories ? (
           <>
             {repo.subrepositories.map(subRepo => (
               <div className='flex justify-center items-center gap-4' key={subRepo.name}>
                 <Image src={RepositoryIcon} alt='repository' width={24} height={24} />
-                <a href={subRepo.html_url} className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{subRepo.name}</a>
+                <a href={subRepo.html_url} target='_blank' className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{subRepo.name}</a>
               </div>
             ))}
           </>
         ) : (
           <div className='flex justify-center items-center gap-4'>
             <Image src={RepositoryIcon} alt='repository' width={24} height={24} />
-            <a href={repo.html_url} className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{repo.name}</a>
+            <a href={repo.html_url} target='_blank' className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{repo.name}</a>
           </div>
         )}
       </div>
