@@ -1,4 +1,5 @@
 import { MapRepositories, repositoriesDataSchema } from '@/utils/map-repositories'
+import { RepoTree } from './RepoTree'
 
 export async function Projects() {
   const response = await fetch('https://api.github.com/users/felipecalgaro/starred')
@@ -15,15 +16,11 @@ export async function Projects() {
   ).map()
 
   return (
-    <div className='h-screen' id='projects'>{repositories.map(repo => (
-      <div key={repo.name}>
-        <h1 key={repo.name}>{repo.name}</h1>
-        {repo.hasSubrepositories && (
-          <div className='ml-12'>
-            {repo.subrepositories.map(repo => (<h1 key={repo.name}>{repo.name}</h1>))}
-          </div>
-        )}
-      </div>
-    ))}</div>
+    <div className='lg:w-5/6 w-full' id='projects'>
+      <h1 className='text-center xs:text-6xl text-5xl font-semibold mb-24 text-stone-800'>My Projects</h1>
+      <div className='flex flex-col justify-center items-start gap-16'>{repositories.map(repo => (
+        <RepoTree repo={repo} key={repo.name} />
+      ))}</div>
+    </div>
   )
 }
