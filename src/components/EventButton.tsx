@@ -30,8 +30,12 @@ export function EventButton({ isRightOriented, eventIcon, images, content, title
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className='bg-transparent text-white' />
-            <CarouselNext className='bg-transparent text-white' />
+            {images.length > 1 && (
+              <>
+                <CarouselPrevious className='bg-transparent text-white' />
+                <CarouselNext className='bg-transparent text-white' />
+              </>
+            )}
           </Carousel>
           <p className='md:hidden block text-white max-w-[720px] xs:px-10 text-center text-lg font-bold'>{title}</p>
           <p className='md:hidden block text-white max-w-[720px] xs:px-10 text-center xs:text-base text-sm font-extralight'>{content}</p>
