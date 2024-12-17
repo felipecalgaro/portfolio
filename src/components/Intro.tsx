@@ -4,13 +4,12 @@ import Image from 'next/image';
 import { motion } from 'framer-motion'
 import DownloadIcon from '../assets/download-icon.svg'
 import GithubIcon from '../assets/github-icon.svg'
-import LinkedinIcon from '../assets/linkedin-icon.svg'
 import ArrowIcon from '../assets/right-arrow.svg'
 
 export function Intro() {
   return (
     <div className='flex flex-col justify-start items-center gap-16'>
-      <div className='flex justify-center items-center gap-24'>
+      <div className='flex justify-center items-center flex-wrap gap-24'>
         <motion.div initial={{ x: -40, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { duration: .6 } }} viewport={{ once: true }} className='rounded-full p-2 shadow-xl'>
           <Image alt='avatar' src='https://github.com/felipecalgaro.png' height={180} width={180} className='rounded-full' />
         </motion.div>
@@ -29,9 +28,6 @@ export function Intro() {
         <div className='flex justify-center items-center gap-8'>
           <a className='ring-[1.3px] ring-custom-black p-3 rounded-sm text-xl flex justify-center items-center gap-2' href='https://github.com/felipecalgaro' target='_blank'>
             <Image src={GithubIcon} alt='github' width={28} height={28} />
-          </a>
-          <a className='ring-[1.3px] ring-custom-black p-3 rounded-sm text-xl flex justify-center items-center gap-2' href='#' target='_blank'>
-            <Image src={LinkedinIcon} alt='linkedin' width={28} height={28} />
           </a>
         </div>
       </div>
