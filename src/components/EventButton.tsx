@@ -16,7 +16,7 @@ type EventButtonProps = {
 export function EventButton({ isRightOriented, eventIcon, images, content, title }: EventButtonProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   return (
-    <div onClick={!isExpanded ? () => setIsExpanded(true) : undefined} className={clsx('rounded-full shadow-xl bg-white xs:p-4 p-2.5 ring-1 ring-zinc-100 cursor-pointer', { '-order-1': isRightOriented })}>
+    <div onClick={!isExpanded ? () => setIsExpanded(true) : undefined} className={clsx('rounded-full shadow-xl bg-white xs:p-4 p-2.5 ring-1 ring-zinc-100 cursor-pointer hover:ring-zinc-300 hover:bg-gray-300 transition-all', { '-order-1': isRightOriented })}>
       <Image alt='icon' src={`/${eventIcon}`} height={72} width={72} />
       <div className={clsx('z-40 pt-24 px-12 top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.9)] overflow-auto fixed cursor-default', {
         'hidden': !isExpanded,

@@ -13,7 +13,7 @@ export function Intro() {
         <motion.div initial={{ x: -40, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { duration: .6 } }} viewport={{ once: true }} className='rounded-full p-2 shadow-xl'>
           <Image alt='avatar' src='https://github.com/felipecalgaro.png' height={180} width={180} className='rounded-full' />
         </motion.div>
-        <motion.h1 initial={{ x: 40, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { duration: .6 } }} viewport={{ once: true }} className='text-8xl'>👋</motion.h1>
+        <motion.h1 initial={{ x: 40, opacity: 0 }} whileInView={{ x: 0, opacity: 1, transition: { duration: .6 } }} viewport={{ once: true }} className='text-8xl select-none'>👋</motion.h1>
       </div>
       <h1 className='font-crimson text-4xl sm:w-1/2 w-full text-center'><b>Hello, I&apos;m Felipe.</b> I&apos;m a <b>full-stack developer.</b> I enjoy building <i>websites</i> & <i>apps</i>. My focus is <span className='underline underline-offset-4 decoration-2'>Node.js</span> and <span className='underline underline-offset-4 decoration-2'>React</span>. </h1>
       <div className='flex sm:flex-row flex-col justify-center items-center gap-7'>
