@@ -18,7 +18,7 @@ export async function Projects() {
   return (
     <div className='lg:w-5/6 w-full' id='projects'>
       <h1 className='text-center xs:text-6xl text-5xl font-semibold mb-24 text-stone-800'>My Projects</h1>
-      <div className='flex flex-col justify-center items-start gap-16'>{repositories.map(repo => (
+      <div translate='no' className='flex flex-col justify-center items-start gap-16'>{repositories.map(repo => (
         <RepoTree repo={repo} key={repo.name} />
       ))}</div>
     </div>

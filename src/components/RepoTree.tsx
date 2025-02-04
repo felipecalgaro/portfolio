@@ -32,7 +32,7 @@ export function RepoTree({ repo }: RepoTreeProps) {
       <div className={isFolderOpen ? 'sm:ml-16 ml-8 flex flex-col justify-center items-start gap-6' : 'hidden'}>
         <div className='flex justify-center items-center gap-4 mt-6'>
           <Image src={InfoIcon} alt='info' width={24} height={24} />
-          <p className='font-light'>{repo.description}</p>
+          <p translate='yes' className='font-light'>{repo.description}</p>
         </div>
         {repo.hasSubrepositories ? (
           <>
