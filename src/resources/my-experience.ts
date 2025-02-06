@@ -17,8 +17,8 @@ export const events: EventDetails[] = [
     icon: "trophy-icon.svg",
     images: [
       "maua-scholarship.jpg",
-      "german-group.jpeg",
       "city-view-scholarship.jpg",
+      "germany-certificate.png",
     ],
   },
   {
