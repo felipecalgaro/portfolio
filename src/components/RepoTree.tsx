@@ -20,7 +20,7 @@ export function RepoTree({ repo }: RepoTreeProps) {
       <button onClick={() => setIsFolderOpen((prev) => !prev)} className='flex justify-center items-center gap-3'>
         {isFolderOpen ? (
           <div className='flex justify-center items-center w-9'>
-            <Image src={OpenFolderIcon} alt='repo' width={34} height={34} />
+            <Image src={OpenFolderIcon} alt='repo' width={32} height={32} />
           </div>
         ) : (
           <div className='flex justify-center items-center w-9'>

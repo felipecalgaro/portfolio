@@ -21,7 +21,7 @@ export function Intro() {
           Contact me
           <Image src={ArrowIcon} alt='arrow' width={24} height={24} />
         </a>
-        <a className='ring-[1.3px] ring-custom-black px-5 py-3 rounded-sm text-xl flex justify-center items-center gap-2' href='#'>
+        <a className='ring-[1.3px] ring-custom-black px-5 py-3 rounded-sm text-xl flex justify-center items-center gap-2' href='/Lebenslauf-Felipe-Calgaro.pdf' download>
           Download CV
           <Image src={DownloadIcon} alt='download' width={28} height={28} />
         </a>

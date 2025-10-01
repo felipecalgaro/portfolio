@@ -78,4 +78,13 @@ export const events: EventDetails[] = [
     icon: "graduation-icon.png",
     images: ["medals-and-certificates.png", "graduation.jpg"],
   },
+  {
+    id: 8,
+    title: "Admission to Hochschule Kaiserslautern",
+    date: ["May", "2025"],
+    content:
+      "Successfully admitted with the third highest score to a preparatory course for international students at Hochschule Kaiserslautern, Germany. This course, called Studienkolleg, is designed to equip international students with the necessary academic skills and language proficiency to excel in their chosen degree programs.",
+    icon: "certificate-icon.svg",
+    images: ["university-admission-certificate.png"],
+  },
 ];

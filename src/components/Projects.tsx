@@ -2,7 +2,7 @@ import { MapRepositories, repositoriesDataSchema } from '@/utils/map-repositorie
 import { RepoTree } from './RepoTree'
 
 export async function Projects() {
-  const response = await fetch('https://api.github.com/users/felipecalgaro/starred', { cache: 'no-store' })
+  const response = await fetch('https://api.github.com/users/felipecalgaro/starred')
   const data = await response.json()
 
   const { data: repositoriesData, error } = repositoriesDataSchema.safeParse(data)

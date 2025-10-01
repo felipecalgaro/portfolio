@@ -7,12 +7,10 @@ export const skills: string[] = [
   "Next.js",
   "Node.js",
   "Express",
-  "Fastify",
   "Tailwind",
   "Prisma",
   "GraphQL",
   "WebSocket",
   "PostgreSQL",
-  "Zod",
   "Git",
 ];
