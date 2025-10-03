@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion'
-import DownloadIcon from '../assets/download-icon.svg'
 import GithubIcon from '../assets/github-icon.svg'
 import ArrowIcon from '../assets/right-arrow.svg'
+import { DownloadButton } from './DownloadButton';
 
 export function Intro() {
   return (
@@ -21,10 +21,7 @@ export function Intro() {
           Contact me
           <Image src={ArrowIcon} alt='arrow' width={24} height={24} />
         </a>
-        <a className='ring-[1.3px] ring-custom-black px-5 py-3 rounded-sm text-xl flex justify-center items-center gap-2' href='/Lebenslauf-Felipe-Calgaro.pdf' download>
-          Download CV
-          <Image src={DownloadIcon} alt='download' width={28} height={28} />
-        </a>
+        <DownloadButton />
         <div className='flex justify-center items-center gap-8'>
           <a className='ring-[1.3px] ring-custom-black p-3 rounded-sm text-xl flex justify-center items-center gap-2' href='https://github.com/felipecalgaro' target='_blank'>
             <Image src={GithubIcon} alt='github' width={28} height={28} />

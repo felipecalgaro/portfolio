@@ -10,6 +10,15 @@ export type EventDetails = {
 export const events: EventDetails[] = [
   {
     id: 1,
+    title: "Bronze medal in National Finance Education Olympiad (OBEF)",
+    date: ["December", "2022"],
+    content:
+      "This olympiad is designed to promote financial literacy among students, covering topics such as personal finance, investment, economics, and entrepreneurship. It aims to equip students with essential financial knowledge and skills that are crucial for making informed decisions in their personal and professional lives.",
+    icon: "medal-icon.svg",
+    images: ["certificate-obef.png"],
+  },
+  {
+    id: 2,
     title: "Scholarship and travel to Germany",
     date: ["March", "2023"],
     content:
@@ -22,7 +31,7 @@ export const events: EventDetails[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Silver medal in Kangaroo National Mathematics Olympiad",
     date: ["August", "2023"],
     content:
@@ -31,7 +40,7 @@ export const events: EventDetails[] = [
     images: ["canguru-certificate.jpg"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Gold medal in National Science Olympiad (ONC)",
     date: ["October", "2023"],
     content:
@@ -40,7 +49,7 @@ export const events: EventDetails[] = [
     images: ["certificate-onc.jpeg"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Programming Hackathon in school",
     date: ["November", "2023"],
     content:
@@ -49,7 +58,7 @@ export const events: EventDetails[] = [
     images: ["certificate-desafiodev.jpg", "certificate-hackathon.jpg"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Bronze medal in National Mathematics Olympiad (OBMEP)",
     date: ["August", "2024"],
     content:
@@ -62,7 +71,7 @@ export const events: EventDetails[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Gold medal in National Astronomy Olympiad (OBA)",
     date: ["September", "2024"],
     content:
@@ -71,7 +80,7 @@ export const events: EventDetails[] = [
     images: ["certificate-oba.jpg"],
   },
   {
-    id: 7,
+    id: 8,
     title: "School graduation",
     date: ["December", "2024"],
     content: "14th December, 2024 - Colégio Mauá, Brazil.",
@@ -79,7 +88,7 @@ export const events: EventDetails[] = [
     images: ["medals-and-certificates.png", "graduation.jpg"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Admission to Hochschule Kaiserslautern",
     date: ["May", "2025"],
     content:

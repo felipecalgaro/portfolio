@@ -4,6 +4,7 @@ export const skills: string[] = [
   "JavaScript",
   "TypeScript",
   "React",
+  "React Native",
   "Next.js",
   "Node.js",
   "Express",
