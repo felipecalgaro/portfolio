@@ -1,9 +1,8 @@
 export const skills: string[] = [
-  "HTML",
-  "CSS",
   "JavaScript",
   "TypeScript",
   "React",
+  "Redux",
   "React Native",
   "Next.js",
   "Node.js",
