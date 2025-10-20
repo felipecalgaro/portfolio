@@ -1,3 +1,4 @@
+import { repositoriesDataSchema } from "@/components/Projects";
 import {
   newRepositoriesNames,
   repositoriesMappingSchema,
@@ -5,19 +6,11 @@ import {
 } from "@/resources/repositories-details";
 import { z } from "zod";
 
-export const repositoriesDataSchema = z.array(
-  z.object({
-    id: z.number(),
-    name: z.string(),
-    owner: z.object({
-      login: z.string(),
-    }),
-    html_url: z.string(),
-    description: z.string().nullable(),
-  })
-);
-
-type RepositoriesDataSchemaType = z.infer<typeof repositoriesDataSchema>;
+type RepositoriesDataSchemaType = (z.infer<
+  typeof repositoriesDataSchema
+>[number] & {
+  readme: string | null;
+})[];
 
 type MappedRepositoryWithoutSubrepositories = {
   hasSubrepositories: false;
@@ -25,6 +18,7 @@ type MappedRepositoryWithoutSubrepositories = {
   description: string;
   html_url: string;
   id: number;
+  readme: string | null;
 };
 
 type MappedRepositoryWithSubrepositories = {
@@ -35,6 +29,7 @@ type MappedRepositoryWithSubrepositories = {
     id: number;
     name: string;
     html_url: string;
+    readme: string | null;
   }[];
 };
 
@@ -98,6 +93,7 @@ export class MapRepositories {
           id: previousRepo.id,
           name: previousRepo.name,
           html_url: previousRepo.html_url,
+          readme: previousRepo.readme,
         };
       }),
     })) satisfies MappedRepositoryWithSubrepositories[];

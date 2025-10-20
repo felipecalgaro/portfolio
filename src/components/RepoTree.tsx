@@ -7,6 +7,7 @@ import OpenFolderIcon from '../assets/open-folder.svg'
 import InfoIcon from '../assets/info-icon.svg'
 import RepositoryIcon from '../assets/repo-icon.svg'
 import { useState } from 'react'
+import { ReadmeDialog } from './ReadmeDialog'
 
 type RepoTreeProps = {
   repo: MappedRepository
@@ -37,16 +38,22 @@ export function RepoTree({ repo }: RepoTreeProps) {
         {repo.hasSubrepositories ? (
           <>
             {repo.subrepositories.map(subRepo => (
-              <div className='flex justify-center items-center gap-4' key={subRepo.name}>
-                <Image src={RepositoryIcon} alt='repository' width={24} height={24} />
-                <a href={subRepo.html_url} target='_blank' className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{subRepo.name}</a>
+              <div className='flex justify-center items-start gap-6 flex-col w-full' key={subRepo.name}>
+                <div className='flex justify-center items-center gap-4'>
+                  <Image src={RepositoryIcon} alt='repository' width={24} height={24} />
+                  <a href={subRepo.html_url} target='_blank' className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{subRepo.name}</a>
+                </div>
+                <ReadmeDialog readme={subRepo.readme} />
               </div>
             ))}
           </>
         ) : (
-          <div className='flex justify-center items-center gap-4'>
-            <Image src={RepositoryIcon} alt='repository' width={24} height={24} />
-            <a href={repo.html_url} target='_blank' className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{repo.name}</a>
+          <div className='flex justify-center items-start gap-6 flex-col w-full' key={repo.name}>
+            <div className='flex justify-center items-center gap-4'>
+              <Image src={RepositoryIcon} alt='repository' width={24} height={24} />
+              <a href={repo.html_url} target='_blank' className='hover:underline text-blue-500 font-semibold cursor-pointer flex justify-start items-center flex-wrap'><span>felipecalgaro/</span>{repo.name}</a>
+            </div>
+            <ReadmeDialog readme={repo.readme} />
           </div>
         )}
       </div>
