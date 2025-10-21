@@ -19,6 +19,9 @@ export async function Projects() {
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     },
+    next: {
+      revalidate: 3600,
+    }
   })
   const data = await response.json()
 
@@ -34,6 +37,9 @@ export async function Projects() {
         headers: {
           Accept: "application/vnd.github.v3.raw",
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+        },
+        next: {
+          revalidate: 3600,
         }
       })
 
